@@ -1,7 +1,11 @@
 ResourcesPlaceholders
 ======
 
-Gradle plugin which adds support for ${placeholder} [manifestPlaceholders](https://developer.android.com/studio/build/manifest-build-variables.html) in Android resource files   
+Gradle plugin which adds support for ${placeholder} [manifestPlaceholders](https://developer.android.com/studio/build/manifest-build-variables.html) in Android resource files.
+
+This fork of [ResourcePlaceholdersPlugin](https://github.com/timfreiheit/ResourcePlaceholdersPlugin) has been updated to work with newer Gradle versions.
+
+Version 0.11.2 of this fork is known to work with Gradle 8.3.0.
 
 Installation
 ------------
@@ -11,7 +15,7 @@ Add the following to your `build.gradle`:
 Build script snippet for plugins DSL:
 ```gradle
 plugins {
-  id "de.timfreiheit.resourceplaceholders" version "X.X.X"
+  id("pt.jcosta.resourceplaceholders") version "X.X.X"
 }
 ```
 
@@ -26,7 +30,7 @@ buildscript {
         }
     }
     dependencies {
-        classpath "de.timfreiheit.resourceplaceholders:placeholders:X.X.X"
+        classpath("pt.jcosta.resourceplaceholders:resource-placeholders:X.X.X")
     }
 }
 
