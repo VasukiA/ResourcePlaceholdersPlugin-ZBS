@@ -1,5 +1,5 @@
 plugins {
-    id("pt.jcosta.resourceplaceholders")
+    id("zbs.resourceplaceholders")
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
 }
@@ -59,7 +59,6 @@ android {
             applicationIdSuffix = ".staging"
             versionNameSuffix = "-staging"
 
-            manifestPlaceholders["deeplink_confirmed_schema"] = "test-staging"
         }
 
         create("production") {
@@ -67,7 +66,6 @@ android {
             applicationIdSuffix = ".production"
             versionNameSuffix = "-production"
 
-            manifestPlaceholders["deeplink_confirmed_schema"] = "test-production"
         }
     }
 
@@ -79,11 +77,7 @@ dependencies {
 }
 
 resourcePlaceholders {
-    files.set(
-        listOf(
-            "xml/shortcuts.xml",
-            "navigation/graph.xml"
-        )
-    )
+    files = listOf("xml/shortcuts.xml")
+
 }
 
